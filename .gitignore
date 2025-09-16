@@ -3,8 +3,9 @@
 .DS_Store
 
 # Meta Data
-## Jetbrain
+## JetBrains
 .idea
+.iml
 
 # Confidential files
 
