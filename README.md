@@ -1,17 +1,16 @@
 # GitHub Template
 
-## Overview
-
 ## Features
 
 ## Getting Started
 
 ## Project Structure
 ```
-$PROJECT_ROOT
-├── 
-│   └── 
-└── 
+PROJECT_ROOT
+├── SRC
+│   └── SOURCE_CODE
+└── DIRECTORY
+...
 ```
 
 ## Project Guidelines
@@ -27,21 +26,21 @@ $PROJECT_ROOT
 ## Repository Guidelines
 
 ### Commit Message Prefix
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation update
-- `refactor`: Code refactoring
-- `test`: tests
-- `chore`: Other maintenance tasks
+- `Feat`: New feature
+- `Fix`: Bug fix
+- `Docs`: Documentation update
+- `Refactor`: Code refactoring
+- `Test`: Unit tests
+- `Chore`: Other maintenance tasks
 
 ### Branch Strategy
-- `main`: Stable version
-- `feature/`: Implementation or improvement
+- `main`: Stable releases
+- `feature/`: New feature implementation
 
 ### Merge Strategy
 1. `feature` -> `main`
-	- Open a Pull Request targeting the `main` branch
-	- Ensure code review, automated tests, and CI checks if needed
-	- Merge commit with its feature branch name
+	- Open a Pull Request to `main`
+	- Ensure code review and test passed
+	- Merge commit with signature
 
 
