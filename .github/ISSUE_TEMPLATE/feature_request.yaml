@@ -27,9 +27,9 @@ body:
         required: true
 
   - type: textarea
-    id: proposition
+    id: tasks
     attributes:
-      label: Proposition
+      label: Tasks
       description: Describe how the feature could be implemented.
       placeholder: |
         Explain how the idea could be realized clearly.
