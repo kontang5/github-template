@@ -40,20 +40,14 @@ body:
         required: true
 
   - type: textarea
-    id: logs
+    id: context
     attributes:
-      label: Logs
-      description: Include relevant logs, stack traces, or error messages.
-      render: bash
+      label: Environment & Additional Info
+      description: Browser, device, error messages, screenshots, etc.
       placeholder: |
-        # Include relevant code or logs here
+        - Browser: Chrome 120
+        - Device: iPhone 13
+        - Error in console: [paste here]
+      render: markdown
     validations:
-        required: false
-
-  - type: textarea
-    id: additional
-    attributes:
-      label: Additional Information
-      description: Any other context, screenshots, or relevant details.
-    validations:
-        required: false
+      required: false

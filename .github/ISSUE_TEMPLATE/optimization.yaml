@@ -1,47 +1,49 @@
 name: Optimization
-description: Suggest improvements to performance, efficiency
+description: Performance or efficiency improvements
 assignees: kontang5
 labels: optimization
-title: "Optimization: "
+title: "Optimize: "
 body:
-  - type: input
-    id: overview
-    attributes:
-      label: Overview
-      description: Briefly summarize the optimization.
-    validations:
-      required: true
-
   - type: textarea
     id: problem
     attributes:
-      label: Problem / Limitation
-      description: Describe the inefficiency, bottleneck, or limitation.
+      label: Current Issue
+      description: What's slow, inefficient, or could be better?
       placeholder: |
-        Explain the problem clearly.
-
-        Example: "The current algorithm takes O(n²) time on large datasets."
-      render: markdown
-    validations:
-      required: true
-
-  - type: textarea
-    id: proposition
-    attributes:
-      label: Proposition
-      description: Describe your proposed improvement or optimization.
-      placeholder: |
-        Explain the solution and explain why it is reasonable.
+        Describe the bottleneck or inefficiency.
         
-        Example: "Replace the current algorithm to [...] will reduce runtime from O(n²) to O(n log n)."
-      render: markdown
+        Example: "Dashboard loads in 3s because we fetch all 10k users at once"
     validations:
       required: true
 
   - type: textarea
-    id: additional
+    id: solution
     attributes:
-      label: Additional Information
-      description: Any benchmarks, profiling results, or related references.
+      label: Proposed Solution
+      description: How could this be improved?
+      placeholder: |
+        Your idea for optimization.
+        
+        Example: "Implement pagination + lazy loading → reduce to 50 users per page"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: What improvement do you expect?
+      placeholder: |
+        Estimated gains or metrics.
+        
+        Example: "Should reduce load time from 3s to <500ms"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Context
+      description: Benchmarks, profiling data, references, or trade-offs
     validations:
       required: false
