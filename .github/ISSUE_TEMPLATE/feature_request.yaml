@@ -4,22 +4,32 @@ assignees: kontang5
 labels: enhancement
 title: "Feature: "
 body:
-  - type: textarea
+  - type: input
     id: overview
     attributes:
       label: Overview
-      description: What feature do you want and why?
-      placeholder: |
-        Briefly describe the feature and its purpose.
-        
-        Example: "Add dark mode because working at night hurts my eyes"
+      description: Briefly summarize the feature.
     validations:
       required: true
 
   - type: textarea
-    id: solution
+    id: justification
     attributes:
-      label: Solution
+      label: Justification
+      description: Describe why this feature is necessary or valuable.
+      placeholder: |
+        Explain clearly why this feature is needed or useful.
+        
+        Example: "The feature is needed because [...]"
+        Example: "The feature would be useful because [...]"
+      render: markdown
+    validations:
+        required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
       description: Describe how the feature could be implemented.
       placeholder: |
         Explain how the idea could be realized clearly.

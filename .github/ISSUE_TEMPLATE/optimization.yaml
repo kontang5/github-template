@@ -1,49 +1,47 @@
 name: Optimization
-description: Performance or efficiency improvements
+description: Suggest improvements to performance, efficiency
 assignees: kontang5
 labels: optimization
-title: "Optimize: "
+title: "Optimization: "
 body:
+  - type: input
+    id: overview
+    attributes:
+      label: Overview
+      description: Briefly summarize the optimization.
+    validations:
+      required: true
+
   - type: textarea
     id: problem
     attributes:
-      label: Current Issue
-      description: What's slow, inefficient, or could be better?
+      label: Problem / Limitation
+      description: Describe the inefficiency, bottleneck, or limitation.
       placeholder: |
-        Describe the bottleneck or inefficiency.
-        
-        Example: "Dashboard loads in 3s because we fetch all 10k users at once"
+        Explain the problem clearly.
+
+        Example: "The current algorithm takes O(n²) time on large datasets."
+      render: markdown
     validations:
       required: true
 
   - type: textarea
-    id: solution
+    id: proposition
     attributes:
-      label: Proposed Solution
-      description: How could this be improved?
+      label: Proposition
+      description: Describe your proposed improvement or optimization.
       placeholder: |
-        Your idea for optimization.
+        Explain the solution and explain why it is reasonable.
         
-        Example: "Implement pagination + lazy loading → reduce to 50 users per page"
+        Example: "Replace the current algorithm to [...] will reduce runtime from O(n²) to O(n log n)."
+      render: markdown
     validations:
       required: true
 
   - type: textarea
-    id: impact
+    id: additional
     attributes:
-      label: Expected Impact
-      description: What improvement do you expect?
-      placeholder: |
-        Estimated gains or metrics.
-        
-        Example: "Should reduce load time from 3s to <500ms"
-    validations:
-      required: false
-
-  - type: textarea
-    id: notes
-    attributes:
-      label: Additional Context
-      description: Benchmarks, profiling data, references, or trade-offs
+      label: Additional Information
+      description: Any benchmarks, profiling results, or related references.
     validations:
       required: false
