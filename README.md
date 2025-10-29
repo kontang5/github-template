@@ -53,9 +53,9 @@ PROJECT_ROOT
 
 ### Documentation
 
-- Inline comments for complex logic
-- JSDoc/docstrings for public APIs
-- README updates for major changes
+- [Product Requirement Document](docs/PRD.md)
+- [Feature Specification](docs/FEATURE.md)
+- [Database](docs/DATABASE.md)
 
 ### Versioning
 
